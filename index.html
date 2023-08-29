@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convert youtube link</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            padding: 20px;
+            width: 500px;
+            max-width: 100%;
+            margin-inline: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        form label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        form input,
+        form select {
+            height: 40px;
+            width: 100%;
+            border: 2px solid grey;
+            border-radius: 3px;
+            padding-inline: 10px;
+            outline: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        form input[type=submit] {
+            cursor: pointer;
+            background: blue;
+            color: white;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        form input[type=submit]:hover {
+            background: darkblue;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .iframe-container iframe {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form>
+            <h1>Convert Youtube Links to Iframe Embed Link </h1>
+            <label for="link">Enter your Youtube Link</label>
+            <input type="text" placeholder="Enter Link Here" id="link" required>
+            <select id="options" required>
+                <option value="" selected>Select Your Link Type</option>
+                <option value="playlist">Youtube Playlist Link To Iframe</option>
+                <option value="url">Youtube Video Url To Iframe</option>
+            </select>
+            <input type="submit" value="Generate Iframe">
+            <a href="" target="_blank" class="converted-link"></a>
+            <div class="iframe-container">
+            </div>
+        </form>
+    </div>
+
+    <script src="scritp.js"></script>
+</body>
+
+</html>
